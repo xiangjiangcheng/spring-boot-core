@@ -1,0 +1,9 @@
+# 配置服务器端口，默认是8080，可以不用配置
+server:
+  port: 18080
+
+spring:
+  application:
+    name: spring-boot-demo
+  profiles:
+    active: dev

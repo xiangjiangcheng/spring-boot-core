@@ -1,0 +1,71 @@
+# thymeleaf config
+spring:
+#  thymeleaf:
+#    cache: false # Enable template caching.开发时关闭缓存,不然没法看到实时页面
+#    check-template-location: true # Check that the templates location exists.
+#    content-type: text/html # Content-Type value.
+#    enabled: true # Enable MVC Thymeleaf view resolution.
+#    encoding: UTF-8 # Template encoding.
+#    mode: HTML5 # Template mode to be applied to templates. See also StandardTemplateModeHandlers.
+#    prefix: classpath:/templates/ # Prefix that gets prepended to view names when building a URL.
+#    suffix: .html # Suffix that gets appended to view names when building a URL.
+  datasource: # mysql
+      url: jdbc:mysql://59.110.155.32:3306/springboot?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=true
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update #hibernate.hbm2ddl.auto节点的值有几个create、create-drop、update、validate、none
+    open-in-view: true
+#  redis: # REDIS (RedisProperties)
+#    database: 0 # Redis数据库索引（默认为0）
+#    host: localhost # Redis服务器地址
+#    password:  # Redis服务器连接密码（默认为空）
+#    pool:
+#      max-active: 8 # 连接池最大连接数（使用负值表示没有限制）
+#      max-wait: -1 # 连接池最大阻塞等待时间（使用负值表示没有限制）
+#      max-idle: 8 # 连接池中的最大空闲连接
+#      min-idle: 0 # 连接池中的最小空闲连接
+#      timeout: 0 # 连接超时时间（毫秒）
+  mail: # JavaMailSender 发送邮件
+    host: smtp.qq.com
+    username: 1150241658
+    password: xwvtoujokoizgdhb  # 这里是授权密码
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+#sdk: # 目前使用的支付宝沙箱环境
+# alipay:
+#  dev: true # 默认false,为true表示使用沙箱环境
+#  sign-type: RSA2 # 签名算法 RSA2 RSA
+#  app-id: 2016091100486084 # 应用ID
+#  private-key: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCTlEF0SbktcnmtJB8gI7ZrQ0cHaWaoiLXCXAViYoRQWjJQwDG0Sr6R9I7Tbv4JVFZR0Psmr+OmJ7bTeRmidHBPqYyx16IM6l9MZY4THk+ojsPHjw9xhXBgLnIfGWiLoM7l6PJ5hW9d90WN+1ESMBzGclNsmRLaKmTULd9abkIAa1nC/HkQ+ms2d7x4VnDSyM9E3YBUSx3tvxdXN3z8TqEyCcO7unlByqot9IVKaoYqiqP99Jl8hofgqCenbplKw+gU/t0JU7ZDFinWq8vjJPEKS+ZhoStYu4WdcnMWHL/yg3gXaeadA2Cdte1MvVXGUnOXvbT+D3A6gZ0jFvJ2PSglAgMBAAECggEAPNKDT2v697IQV71lXpeZXQezRGi6OIdvcZT/WxcDNSKXThSH56hOdlT2cEl0RWAO21VnzP/8sMP5Y5qrZ/rZNtvH8pvOW8hUUmYgcdyyM+Py6FIbqUu3jsxVmF+eaL1zx+mD1XWa+n0om2WSeg5+LYN8wmssC+IhABmPzfNXHFiBM8aK4WiGZ+JdnC375CjZF3s0AzUgnruxi1StjCcKamLgbl1xDJsApNQudFua9PAdheIKXsDE2EIaDwZ5DbpICAs5XzIJ2iNunNZUmqcpwEtae4B4kGxPHgPzkbLxL9apZY4/WBK5yfTzAecj22O9gN7a8+mdvYcYxW+vHnPKGQKBgQDTaKidCKMT1b5ZA5ZttQ3V7mO2qVDobIO+1JJfEaIcQC5GN+U8qEOxn41qldRMP0agVmQw7KBTaYHw8mlmB4M/M4a9oJjq0AJhgXh0Tq86x9vyY+YHNrTst5BzSuzJGlqlHjsS9UEX3a3oFn0wDZm0gdG9OhzDdHP1F7jW/ayWLwKBgQCytQPlqaSWqvegKrFqWU1IdO9lLbSpSf3BWI+JY5aZ0hgL+d9wyPRalDu9awmF1RiU860krGEUx8KKVH3apEtaZmoQG5DMIViV43S5+IylElXrUfZSKx3I5C+DlCdGJg0F4xCQh37Ii2vtkNbxs5HIk6cyhYVIj8sjHssKtm2l6wKBgQCS12Iu2P303AU/7OcCwryeeNwX1xlUp3MHDL2yfRv9xXKe4Vo/vJxwduOSQgnZACZ9XiRvexyNc36HLsmYzeUS9CZF9pPgnaTZt0VEfBbonEOg5FS1dAFNXt9dxZAcy0pk4E+mBmY1Pov55g0EYJ3/rCBT8FZkSLH2boi8BC1pjwKBgDeyp1ZLO1siSi+HXuhwkN/GYl68khQ5VXePbJ07htLGYmxJItT6LP6WONBergciVZkHIa3OdCuP3xhSIS+mCT5RsTj3/ndA5WVCET1tNBi20ESZtRYDDjNwu0ZdRKheb6yoCp+hO2ix25+dhwCqIQPM0U2zw8jL2FpH3KyoEyClAoGBAJ6kpwv8HmbBlmtUhzUB7VrY9QXdWgBf89gnXK/BdLv442U9bvnOiWFuFNgLaj6PjCvPmC+0Qqi3BtVB1mH/7ztoU+xDeIpYmzpTuf0oOUlkD3UD6/eRM1fU83pqVzvg5ULFLAhrvr2xYJkF+L482r0ZGwU51f0oB7jzxeLRKVPu # 应用私钥
+#  alipay-public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyPa1V2BSMJjSknLGpIM6ggtFWF/upBEgw5SHkAhbc5nlZk2yqIFi4K3wqqD/n6utIQo3oKzmfKUXMELn7VQ7Kjam8dEG/JBVKooY89QUwRoVQ7gG1Ym6zQ4/xK0S1wwu9zxam/hmQLHESdEYjZB0MWseVZmRliyab9EYmLuM7rrWBwTYzCIhWBuZXDRkxCGqtVcF/fodzrmhpRTQswUbZq7s4ewaABuH2Vkw61y27isnLzKv1vg9nLYPPHOweGUYhqkcAw8YHji9iL73Vg3xtTwrX75I1Tc7EV5ALy8/bVy0KsobdemFA6Wa8ydRGDQFG0HeqPJdcxLLFSRtxpxBswIDAQAB # 支付宝公钥
+
+# 引入log4j2日志配置文件
+#logging:
+#  config: classpath:log4j2.xml
+
+# swagger2
+#swagger:
+#  enabled: true
+#  title: 竹牛核心服务
+#  description: 负责商家管理、订单管理等
+#  version: 0.0.1-SNAPSHOT
+#  base-package: com.ingo
+#  base-path: /**
+#  exclude-path: /error
+#  globalOperationParameters:
+#    - name: Authorization
+#      description: 令牌
+#      modelRef: String
+#      parameterType: header
+#      required: true

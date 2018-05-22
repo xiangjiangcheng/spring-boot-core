@@ -1,0 +1,42 @@
+# thymeleaf config
+spring:
+  thymeleaf:
+    cache: false # Enable template caching.开发时关闭缓存,不然没法看到实时页面
+    check-template-location: true # Check that the templates location exists.
+    content-type: text/html # Content-Type value.
+    enabled: true # Enable MVC Thymeleaf view resolution.
+    encoding: UTF-8 # Template encoding.
+    mode: HTML5 # Template mode to be applied to templates. See also StandardTemplateModeHandlers.
+    prefix: classpath:/templates/ # Prefix that gets prepended to view names when building a URL.
+    suffix: .html # Suffix that gets appended to view names when building a URL.
+  datasource: # mysql
+      url: jdbc:mysql://localhost:3306/spingboot?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: create-drop
+
+# 引入log4j2日志配置文件
+#logging:
+#  config: classpath:log4j2.xml
+
+# swagger2
+#swagger:
+#  enabled: true
+#  title: 竹牛核心服务
+#  description: 负责商家管理、订单管理等
+#  version: 0.0.1-SNAPSHOT
+#  base-package: com.ingo
+#  base-path: /**
+#  exclude-path: /error
+#  globalOperationParameters:
+#    - name: Authorization
+#      description: 令牌
+#      modelRef: String
+#      parameterType: header
+#      required: true
