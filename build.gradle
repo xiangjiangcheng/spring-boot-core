@@ -31,6 +31,11 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.0'
 	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.7.0'
+	// jackson
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.5'
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.5'
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.5'
+
 	runtime('mysql:mysql-connector-java')
 	runtime('org.springframework.boot:spring-boot-devtools')
 	compileOnly('org.projectlombok:lombok')
