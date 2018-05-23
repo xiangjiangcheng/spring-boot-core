@@ -10,7 +10,7 @@ spring:
     prefix: classpath:/templates/ # Prefix that gets prepended to view names when building a URL.
     suffix: .html # Suffix that gets appended to view names when building a URL.
   datasource: # mysql
-      url: jdbc:mysql://localhost:3306/spingboot?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      url: jdbc:mysql://localhost:3306/spingboot?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false
       username: root
       password: 123456
       driver-class-name: com.mysql.jdbc.Driver

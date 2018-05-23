@@ -4,6 +4,6 @@ server:
 
 spring:
   application:
-    name: spring-boot-demo
+    name: spring-boot-core
   profiles:
     active: dev
