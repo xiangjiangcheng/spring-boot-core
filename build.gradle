@@ -35,6 +35,9 @@ dependencies {
 	compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.5'
 	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.5'
 	compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.5'
+	// elasticsearch
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-elasticsearch', version: '2.0.3.RELEASE'
+
 
 	runtime('mysql:mysql-connector-java')
 	runtime('org.springframework.boot:spring-boot-devtools')

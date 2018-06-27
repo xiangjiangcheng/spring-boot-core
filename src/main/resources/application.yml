@@ -7,3 +7,8 @@ spring:
     name: spring-boot-core
   profiles:
     active: dev
+
+elasticsearch:
+  clustername: elasticsearch
+  hosts: 47.104.64.186
+  port:  9300
