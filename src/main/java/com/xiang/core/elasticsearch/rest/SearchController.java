@@ -24,7 +24,11 @@ public class SearchController {
         return new ResponseEntity(com.toString(), HttpStatus.OK);
     }
 
-    @RequestMapping(method = {RequestMethod.POST})
+
+    /**
+     * 添加一行数据到es   如果里面没有配置的index  会自动创建
+     */
+    @RequestMapping(value = "/addItem", method = {RequestMethod.POST})
     public ResponseEntity createItem(@RequestBody ItemDocument document) {
         repository.save(document);
 

@@ -10,7 +10,13 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
  * 商品Document -example
  * <p>
  * Created by lijingyao on 2018/1/18 18:03.
+ *
+ * @Document注解里面的几个属性，类比mysql的话是这样：
+ * index –> DB
+ * type –> Table
+ * Document –> row
  */
+
 @Document(indexName = ItemDocument.INDEX, type = ItemDocument.TYPE)
 public class ItemDocument {
 
