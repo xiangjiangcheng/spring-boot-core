@@ -14,4 +14,6 @@
 
 5. configuration-processor # 读取配置
 
+5. Elasticsearch # 全文搜索
+
 
