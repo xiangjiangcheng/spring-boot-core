@@ -2,6 +2,8 @@ package com.xiang.core.service;
 
 import com.xiang.core.entity.Goods;
 
+import java.util.List;
+
 /**
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * <p>
@@ -9,4 +11,6 @@ import com.xiang.core.entity.Goods;
  */
 public interface GoodsService {
     Goods queryGoodsByGoodsId(String goodsId);
+
+    List<Goods> findAllValidDataByCondition();
 }

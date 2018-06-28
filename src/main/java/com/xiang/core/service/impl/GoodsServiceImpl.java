@@ -6,6 +6,8 @@ import com.xiang.core.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * <p>
@@ -18,6 +20,12 @@ public class GoodsServiceImpl implements GoodsService{
 
     @Override
     public Goods queryGoodsByGoodsId(String goodsId) {
-        return goodsRepository.findById(String.valueOf(goodsId)).get();
+        Goods goods = goodsRepository.findById(String.valueOf(goodsId)).get();
+        return goods;
+    }
+
+    @Override
+    public List<Goods> findAllValidDataByCondition() {
+        return (List<Goods>) goodsRepository.findAll();
     }
 }

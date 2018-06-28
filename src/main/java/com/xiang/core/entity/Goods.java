@@ -3,10 +3,7 @@ package com.xiang.core.entity;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Transient;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.Objects;
 
@@ -21,75 +18,96 @@ import java.util.Objects;
 @Table(name = "goods")
 public class Goods {
     @Id
+    @Column(name = "goodsid")
     private String goodsId;
 
     /**
      * 类型
      */
+    @Column(name = "gstype")
     private Integer gsType;
 
     /**
      * 消费类型
      */
+    @Column(name = "consutype")
     private Integer consuType;
 
     /**
      * 名称
      */
+    @Column(name = "goodsname")
     private String goodsName;
 
     /**
      * 商品原价
      */
+    @Column(name = "purchaseprice")
     private Long purchasePrice;
 
     /**
      * 商品金币购价格
      */
+    @Column(name = "moneyprice")
     private Long moneyPrice;
 
     /**
      * 商品金币购金币个数
      */
+    @Column(name = "goldprice")
     private Long goldPrice;
 
     /**
      * 商品RMB 返利
      */
+    @Column(name = "rebatemoney")
     private Long rebateMoney;
 
     /**
      * 状态（上架或下架）
      */
+    @Column(name = "state")
     private Integer state;
 
+    @Column(name = "createat")
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date createAt;
 
+    @Column(name = "updateat")
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date updateAt;
 
+    @Column(name = "coverimg")
     private String coverImg;
 
+    @Column(name = "classifys")
     private String classifys;
 
+    @Column(name = "bannervideo")
     private String bannerVideo;
 
+    @Column(name = "goodsvideo")
     private String goodsVideo;
 
+    @Column(name = "goodsvideoimg")
     private String goodsVideoImg;
 
+    @Column(name = "goodsSpecImg")
     private String goodsSpecImg;
 
+    @Column(name = "coverimgdescription")
     private String coverImgDescription;
 
+    @Column(name = "coverimgdescription2")
     private String coverImgDescription2;
 
+    @Column(name = "hideflag")
     private Boolean hideFlag;
 
     /**
      * 商品优先级
      */
+    @Column(name = "level")
     private Integer level;
 
     @Transient
@@ -110,11 +128,13 @@ public class Goods {
     /**
      * 商品总库存  - 用于新手0元购
      */
+    @Column(name = "totalamount")
     private Integer totalAmount;
 
     /**
      * 商品总销量  - 用于新手0元购
      */
+    @Column(name = "totalsales")
     private Integer totalSales;
 
     @Override
