@@ -14,12 +14,15 @@
 
 5. configuration-processor # 读取配置
 
-5. Elasticsearch # 全文搜索
+6. Elasticsearch # 全文搜索
 
 
-
-
+### 运行访问
+swagger2: http://localhost:18080/swagger-ui.html
+![avatar](./src/img/swagger2访问截图.png)
 
 ### 参考代码 Github
 
 [Spring Boot 中使用 Java API 调用 Elasticsearch](https://github.com/souyunku/spring-boot-examples/tree/master/spring-boot-elasticsearch-demo)
+
+[spring boot + vue + element-ui全栈开发入门——开篇](http://www.cnblogs.com/GoodHelper/p/8430422.html)
