@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50722
 File Encoding         : 65001
 
-Date: 2018-06-28 16:34:05
+Date: 2018-07-14 12:01:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -123,6 +123,23 @@ INSERT INTO `goods` VALUES ('442', '1', '1', '百事可乐瓶装', '1100', '0', 
 INSERT INTO `goods` VALUES ('443', '1', '1', 'tjl06261819', '100', '0', '100', '1000', '0', '2018-06-26 18:20:01', '2018-06-26 18:20:33', 'http://wybc-qa.oss-cn-hangzhou.aliyuncs.com/WebApp/goods/goods/jpg/201806/1528790702752.jpg', '33', '', '', '', 'http://wybc-qa.oss-cn-hangzhou.aliyuncs.com/WebApp/goods/goods/jpg/201806/1528790433863.jpg', 'tjl06261819', 'tjl06261819', '\0', null, '0', '0', '443', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
 INSERT INTO `goods` VALUES ('444', '1', '1', '乐事薯片', '0', '0', '0', '0', '0', '2018-06-26 19:22:52', '2018-06-26 19:22:52', 'http://wybc-qa.oss-cn-hangzhou.aliyuncs.com/WebApp/goods/goods/jpg/201806/1530010686549.jpg', '32', '', '', '', 'http://wybc-qa.oss-cn-hangzhou.aliyuncs.com/WebApp/goods/goods/jpg/201806/1529572206410.jpg', '袋装黄瓜味', '百年乐事', '\0', null, '0', '0', '444', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
 INSERT INTO `goods` VALUES ('445', '1', '1', 'tjl06262010', '100', '0', '100', '1000', '0', '2018-06-26 20:12:32', '2018-06-26 20:13:11', 'http://wybc-qa.oss-cn-hangzhou.aliyuncs.com/WebApp/goods/goods/jpg/201806/1528790702752.jpg', '40,35,34,33,32', '', '', '', 'http://wybc-qa.oss-cn-hangzhou.aliyuncs.com/WebApp/goods/goods/jpg/201806/1528790433863.jpg', 'tjl06262010', 'tjl06262010', '\0', null, '0', '0', '445', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+
+-- ----------------------------
+-- Table structure for t_member
+-- ----------------------------
+DROP TABLE IF EXISTS `t_member`;
+CREATE TABLE `t_member` (
+  `member_id` varchar(36) NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `sex` bigint(2) DEFAULT NULL COMMENT '性别（0：女 1：男）',
+  `date` date DEFAULT NULL,
+  PRIMARY KEY (`member_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_member
+-- ----------------------------
+INSERT INTO `t_member` VALUES ('cf629634-7482-4126-bf72-a82051a4b527', 'xjc', '0', '2018-07-14');
 
 -- ----------------------------
 -- Table structure for user
