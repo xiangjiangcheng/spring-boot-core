@@ -21,6 +21,7 @@ spring:
         hbm2ddl:
           auto: update #hibernate.hbm2ddl.auto节点的值有几个create、create-drop、update、validate、none
     open-in-view: true
+    show-sql: true
   redis: # REDIS (RedisProperties)
     database: 0 # Redis数据库索引（默认为0）
     host: 59.110.155.32 # Redis服务器地址

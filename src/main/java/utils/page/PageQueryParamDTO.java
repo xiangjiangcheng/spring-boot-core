@@ -1,5 +1,7 @@
 package utils.page;
 
+import io.swagger.models.auth.In;
+
 /**
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * 分页查询参数DTO
@@ -11,40 +13,50 @@ public class PageQueryParamDTO {
     /**
      * 页码
      */
-    private int page;
+    private Integer page;
 
     /**
      * 每页数量
      */
-    private int size;
+    private Integer size;
 
     /**
      * 查询条件
      */
     private Object query;
 
+    private String name;
+
     public PageQueryParamDTO() {
     }
 
-    public PageQueryParamDTO(int page, int size, Object query) {
+    public PageQueryParamDTO(Integer page, Integer size, Object query) {
         this.page = page;
         this.size = size;
         this.query = query;
     }
 
-    public int getPage() {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getPage() {
         return page;
     }
 
-    public void setPage(int page) {
+    public void setPage(Integer page) {
         this.page = page;
     }
 
-    public int getSize() {
+    public Integer getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(Integer size) {
         this.size = size;
     }
 
