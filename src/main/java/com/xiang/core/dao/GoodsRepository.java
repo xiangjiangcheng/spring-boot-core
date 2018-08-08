@@ -17,4 +17,6 @@ import java.util.List;
 public interface GoodsRepository extends JpaSpecificationExecutor<User>, PagingAndSortingRepository<Goods, String> {
 
     List<Goods> findAllByHideFlagIsTrueAndStateIsTrue();
+
+
 }
