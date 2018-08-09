@@ -30,7 +30,9 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-jdbc')
 	compile('org.springframework.boot:spring-boot-starter-data-redis')
 	compile ('org.springframework.boot:spring-boot-starter-web')
-//	providedCompile("org.springframework.boot:spring-boot-starter-tomcat")
+
+	// 打war 将下面注释掉的一行注释回来
+	//	providedCompile("org.springframework.boot:spring-boot-starter-tomcat")
 	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.0'
 	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.7.0'
 	// jackson
@@ -43,6 +45,8 @@ dependencies {
 	compile group: 'com.alibaba', name: 'fastjson', version: '1.2.47'
 	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
 	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-amqp rabbitmq
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-amqp', version: '2.0.4.RELEASE'
 
 	runtime('mysql:mysql-connector-java')
 	runtime('org.springframework.boot:spring-boot-devtools')

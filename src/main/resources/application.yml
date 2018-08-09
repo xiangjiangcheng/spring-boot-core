@@ -7,6 +7,8 @@ spring:
     name: spring-boot-core
   profiles:
     active: dev
+  jmx:   # 同时两个SpringBoot项目放在Tomcat webapps文件夹下启动，第二个项目会报unable to register MBean  加上该项配置，可解决
+    enabled: false
 
 elasticsearch:
   clustername: es5   # 集群名称  跟elasticsearch.yml中一样

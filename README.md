@@ -16,10 +16,15 @@
 
 6. Elasticsearch # 全文搜索
 
+7. rabbitmq   # 消息队列
+
 
 ### 运行访问
 swagger2: http://localhost:18080/swagger-ui.html
 ![avatar](./src/img/swagger2访问截图.png)
+
+
+windows rabbitmq访问： http://localhost:15672/
 
 ### 参考代码 Github
 
