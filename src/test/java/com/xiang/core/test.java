@@ -13,5 +13,8 @@ public class test {
         Double dddd = 144.55d;
 
         System.out.println(dddd.longValue());
+
+        String[] taskMsgArr = "ssdfasd".split("_");
+        String queueType = taskMsgArr[0];
     }
 }
