@@ -32,7 +32,7 @@ dependencies {
 	compile ('org.springframework.boot:spring-boot-starter-web')
 
 	// 打war 将下面注释掉的一行注释回来
-	//	providedCompile("org.springframework.boot:spring-boot-starter-tomcat")
+//	providedCompile("org.springframework.boot:spring-boot-starter-tomcat")
 	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.0'
 	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.7.0'
 	// jackson
