@@ -60,8 +60,8 @@ spring:
       host: 132.232.54.105
       port: 5672
       virtual-host: /
-      username: demo
-      password: demo
+      username: admin
+      password: admin
 
 #sdk: # 目前使用的支付宝沙箱环境
 # alipay:
